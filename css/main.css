@@ -38,18 +38,16 @@ button {
 
 /*Main content*/
 .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  width: 80vw;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 50px;
 }
 
 .product-card {
+  position: relative;
   width: 22rem;
   height: 35rem;
   background-color: #f5f5f5;
@@ -78,16 +76,16 @@ button {
   width: 10rem;
   height: 10rem;
   border-radius: 50%;
-  background-color: #AADB9A;
+  background-color: #aadb9a;
 }
 
 .dish {
   position: absolute;
-  width: 16rem;
+  width: 14rem;
   -webkit-transform: rotate(15deg);
           transform: rotate(15deg);
-  -webkit-transition: 0.5s ease;
-  transition: 0.5s ease;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .intro {
@@ -107,7 +105,7 @@ button {
   padding: 2rem 3rem;
 }
 
-.size-bar button {
+.size-bar .sizeButton {
   width: 4rem;
   height: 1.5rem;
   font-size: 12px;
@@ -126,8 +124,13 @@ button {
 }
 
 .purchase-bar {
-  padding: 0 3rem;
-  margin-top: 2rem;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 3rem;
 }
 
 .purchase-bar button {
@@ -136,21 +139,21 @@ button {
   border-radius: 25px;
   border: transparent;
   color: white;
-  background-color: #789E79;
+  background-color: #789e79;
   -webkit-box-shadow: 0px 8px 18px 0px rgba(51, 53, 42, 0.29);
   box-shadow: 0px 8px 18px 0px rgba(51, 53, 42, 0.29);
 }
 
 .pop-up-effect {
-  -webkit-transition: .3s ease;
-  transition: .3s ease;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
   -webkit-transform: translateZ(50px);
           transform: translateZ(50px);
 }
 
 .pop-up-effect-forimg {
-  -webkit-transition: .3s ease;
-  transition: .3s ease;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
   -webkit-transform: translateZ(50px) rotateX(25deg) rotateZ(25deg) scale(1.1);
           transform: translateZ(50px) rotateX(25deg) rotateZ(25deg) scale(1.1);
 }

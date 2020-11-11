@@ -11,26 +11,67 @@
 <body>
 
     <div class="container">
-        <div class="product-card">
+        <div id="card1" onmousemove="rotateCard(this)" onmouseenter="enterCard(this)" onmouseleave="leaveCard(this)"
+            class="product-card">
             <div class="recipe">
                 <div class="circle"></div>
-                <img class="dish" src="./dish.png" alt="">
+                <img class="dish" src="./img/dish.png" alt="">
             </div>
             <div class="intro">
                 <h1>Vegan Rendang</h1>
                 <p>This Vegan Rendang with potato and tofu has all the deep, aromatic and rich flavours of the
-                    traditional beef rendang, just minus the meat and cooked in a third of the time.</p>
+                    traditional beef rendang, just minus the meat.</p>
             </div>
             <div class="size-bar">
-                <button>M</button>
-                <button class="active">L</button>
-                <button>XL</button>
+                <button class="sizeButton" onclick="sizeSelected(this)" >M</button>
+                <button class="sizeButton active" onclick="sizeSelected(this)">L</button>
+                <button class="sizeButton" onclick="sizeSelected(this)">XL</button>
             </div>
             <div class="purchase-bar">
                 <button>Purchase</button>
             </div>
         </div>
 
+        <div id="card2" onmousemove="rotateCard(this)" onmouseenter="enterCard(this)" onmouseleave="leaveCard(this)"
+            class="product-card">
+            <div class="recipe">
+                <div class="circle"></div>
+                <img class="dish" src="./img/dish-2.png" alt="">
+            </div>
+            <div class="intro">
+                <h1>Osso Buco</h1>
+                <p>Osso buco is a classic Milanese dish of braised veal shanks in a hearty wine- and vegetable-based
+                    sauce.</p>
+            </div>
+            <div class="size-bar">
+                <button class="sizeButton" onclick="sizeSelected(this)" >M</button>
+                <button class="sizeButton active" onclick="sizeSelected(this)">L</button>
+                <button class="sizeButton" onclick="sizeSelected(this)">XL</button>
+            </div>
+            <div class="purchase-bar">
+                <button>Purchase</button>
+            </div>
+        </div>
+
+        <div id="card3" onmousemove="rotateCard(this)" onmouseenter="enterCard(this)" onmouseleave="leaveCard(this)"
+            class="product-card">
+            <div class="recipe">
+                <div class="circle"></div>
+                <img class="dish" src="./img/dish-3.png" alt="">
+            </div>
+            <div class="intro">
+                <h1>Moroccan Salmon</h1>
+                <p>Tender salmon fillets are marinated in delicious Moroccan spices and served with a zesty lemon couscous.</p>
+            </div>
+            <div class="size-bar">
+                <button class="sizeButton" onclick="sizeSelected(this)" >M</button>
+                <button class="sizeButton active" onclick="sizeSelected(this)">L</button>
+                <button class="sizeButton" onclick="sizeSelected(this)">XL</button>
+            </div>
+            <div class="purchase-bar">
+                <button>Purchase</button>
+            </div>
+        </div>
     </div>
 
 
